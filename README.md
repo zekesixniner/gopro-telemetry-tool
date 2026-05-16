@@ -1,4 +1,4 @@
-# GoPro Telemetry Tool
+# GoPro MAX2 Telemetry Tool
 
 Extracts telemetry data from GoPro MAX2 `.360` files and saves to multiple formats simultaneously.
 
