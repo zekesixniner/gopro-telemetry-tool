@@ -99,6 +99,6 @@ To adjust these, edit the `options` object in `extract.js`.
 ## Tested with
 
 - GoPro MAX2, firmware H24.02.01.22.00
-- Ubuntu 24.04 / WSL2 on Windows 11
+- Ubuntu 24.04 / WSL1 on Windows 11
 - Node.js v20.20.2
 - npm 10.8.2
