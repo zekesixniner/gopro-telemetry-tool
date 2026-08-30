@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.2
+
+- Docs-only update: confirmed via `exiftool` that `GS010591.360`
+  (Camera Model Name: `GoPro Max`, firmware `H19.03.02.02.00`) was
+  successfully processed end-to-end — this is the original MAX, not
+  MAX2. README title, intro, and "Tested with" now say "GoPro MAX / MAX2"
+  instead of MAX2-only. The MGJSON limitation note stays MAX2-specific,
+  since that's the only camera it's actually been verified against.
+
 ## 1.1.1
 
 - Renamed `extract-batch.sh` to `gopro_extract_gnss.sh` (GNSS is the

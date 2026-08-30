@@ -1,6 +1,6 @@
-# GoPro MAX2 Telemetry Tool
+# GoPro MAX / MAX2 Telemetry Tool
 
-Extracts telemetry data from GoPro MAX2 `.360` files and saves to multiple formats simultaneously.
+Extracts telemetry data from GoPro MAX and MAX2 `.360` files and saves to multiple formats simultaneously.
 
 Built on top of [gopro-telemetry](https://github.com/JuanIrache/gopro-telemetry) and [gpmf-extract](https://github.com/JuanIrache/gpmf-extract) by Juan Irache.
 
@@ -210,8 +210,9 @@ number of video/audio streams (and therefore which index is GPMD) varies,
 so `extract.js` detects the GPMD stream by its codec tag via `ffprobe`
 first rather than assuming a fixed index. This is what `gopro-telemetry`
 itself is documented to support broadly (Hero5 and later); this tool has
-only been tested end-to-end against MAX/MAX2 `.360` files, so treat other
-models as untested rather than unsupported.
+been tested end-to-end against both GoPro MAX and MAX2 `.360` files (both
+happen to have GPMD at stream 0:3), so treat other Hero models as
+untested rather than unsupported.
 
 This is the same approach already used in
 [`gopro-telemetry-tool-win`](https://github.com/zekesixniner/gopro-telemetry-tool-win)'s
@@ -227,7 +228,7 @@ Requires `ffmpeg` on `PATH` (see Requirements above).
 
 - The KML output has `<altitudeMode>absolute</altitudeMode>` injected automatically, so the flight path renders at correct altitude in Google Earth.
 - **MGJSON does not work with GoPro MAX2 footage** — the MAX2's GPMF data is missing the `frames/second` field that the MGJSON preset requires, so `goproTelemetry` throws and `extract.js` skips it with a `[SKIP]` message. For an After Effects workflow with MAX2 footage, extract GPS with [`gpmf2gpx.py`](https://github.com/zekesixniner/gopro-max2-gpx) instead.
-- Tested with GoPro MAX2, firmware H24.02.01.22.00.
+- Tested with GoPro Max (firmware H19.03.02.02.00) and GoPro MAX2 (firmware H24.02.01.22.00).
 - Works with any GoPro camera supported by `gopro-telemetry` (Hero5 and later); MGJSON and other presets should work normally on cameras whose GPMF data includes the fields they need.
 
 ---
@@ -241,6 +242,7 @@ Requires `ffmpeg` on `PATH` (see Requirements above).
 
 ## Tested with
 
+- GoPro Max, firmware H19.03.02.02.00
 - GoPro MAX2, firmware H24.02.01.22.00
 - Ubuntu 24.04 / WSL1 on Windows 11
 - Node.js v20.20.2
